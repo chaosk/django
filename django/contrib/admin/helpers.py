@@ -61,10 +61,10 @@ class AdminForm:
 
     @property
     def media(self):
-        media = self.form.media
+        media = forms.Media()
         for fs in self:
             media = media + fs.media
-        return media
+        return media + self.form.media
 
 
 class Fieldset:
